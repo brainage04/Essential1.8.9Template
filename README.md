@@ -1,5 +1,5 @@
 # Setup
-Please follow this setup in order, as some steps may be impossible to complete until previous steps have been completed (
+Please follow this setup in order, as some steps may be impossible to complete until previous steps have been completed.
 
 ## JDKs
 You will need two JDKs: Java 17 and Java 1.8. You can download those from here: https://adoptium.net/temurin/releases
