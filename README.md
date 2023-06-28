@@ -57,7 +57,7 @@ val shadowImpl: Configuration by configurations.creating {
 
 After you have added this, press Ctrl+Shift+O to reload Gradle changes. This will download the dependencies for Essential.
 
-Once reloaded, you should have configurations in the top left of IntelliJ for Minecraft Client and Minecraft Server. Edit the configuration settings for Minecraft Client and add the following line to your program arguments:
+Once reloaded, you should have configurations in the top left of IntelliJ for ```Minecraft Client``` and ```Minecraft Server```. Edit the configuration settings for ```Minecraft Client``` and add the following line to your program arguments:
 ```
 --tweakClass gg.essential.loader.stage0.EssentialSetupTweaker
 ```
@@ -71,8 +71,8 @@ You will most likely want to rename the packages and classes (specifically those
 
 1. Refactor (Shift+F6) ```com.yourname``` and change ```yourname``` to your Minecraft username. Use all lowercase, letters only to avoid issues.
 2. Refactor ```com.yourname.yourmod``` and change ```yourmod``` to the name of your mod. Use all lowercase, letters only to avoid issues.
-3. Refactor YourMod to the name of your mod in camel case (including the first letter of the first word - UsingCapitalLettersInsteadOfSpacesLikeThis).
-4. Update the MODID and MODNAME variables in the YourMod class.
+3. Refactor ```YourMod``` to the name of your mod in camel case (including the first letter of the first word - UsingCapitalLettersInsteadOfSpacesLikeThis).
+4. Update the ```MODID``` and ```MODNAME``` variables in the ```YourMod``` class.
 
 This is optional but recommended if you are going to publish this mod:
 
