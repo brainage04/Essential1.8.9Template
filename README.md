@@ -65,9 +65,9 @@ This will load the Essential DI when the game launches, preventing any ```DI uni
 
 If you are still experiencing crashes, make sure all steps of this section have been completed correctly before reaching out for support.
 
-# Refactoring
+## Refactoring
 
-You will most likely want to rename the packages and classes (specifically those titled ```examplemod``` or ```ExampleMod```) before beginning development. Complete the following steps:
+You should rename the packages and classes (specifically those titled ```examplemod``` or ```ExampleMod```) before beginning development. Complete the following steps:
 
 1. Refactor (Shift+F6) ```com.yourname``` and change ```yourname``` to your Minecraft username. Use all lowercase, letters only to avoid issues.
 2. Refactor ```com.yourname.yourmod``` and change ```yourmod``` to the name of your mod. Use all lowercase, letters only to avoid issues.
