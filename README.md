@@ -4,14 +4,15 @@ Please follow this setup in order, as some steps may be impossible to complete u
 ## JDKs
 You will need two JDKs: Java 17 and Java 1.8. You can download those from here: https://adoptium.net/temurin/releases
 
-1. File > Project Structure (Ctrl + Alt + Shift + S) > Set SDK to 1.8 > Apply > OK
-1. Gradle > Build Tool Settings > Gradle Settings > Set Gradle JVM to 17 (should already be set)
+1. `File > Project Structure (Ctrl + Alt + Shift + S)` > Set SDK to `1.8` > `Apply` > `OK`
+1. `Gradle` > `Build Tool Settings` > `Gradle Settings` > Set Gradle JVM to `17` (should already be set) > `Apply` > `OK`
 
-After completing these steps, press `Ctrl+Shift+O` to reload Gradle changes and wait for IntelliJ to index all files before proceeding.
+After completing these steps, wait for IntelliJ to index all files before proceeding.
 
 ## Refactoring
 You should rename the packages and classes before beginning development. Complete the following steps:
 
+### Source Refactoring
 1. Refactor (Shift+F6) `com.yourname` and change `yourname` to your Minecraft username. Use all lowercase, letters only to avoid issues.
 2. Refactor `com.yourname.yourmod` and change `yourmod` to the name of your mod. Use all lowercase, letters only to avoid issues.
 3. Refactor `YourMod` to the name of your mod in camel case (including the first letter of the first word - UsingCapitalLettersInsteadOfSpacesLikeThis).
@@ -30,8 +31,7 @@ Once complete, press `Ctrl+Shift+O` to reload Gradle changes. This will re-index
 If the `Minecraft Client` and `Minecraft Server` configurations do not appear, you may need to close and re-open IntelliJ.
 
 If your configurations in the top right have "X" symbols in the top right of the icons, this means a module needs to be specified.
-Solution: Edit Configurations > Minecraft Client > Module (Alt + O) > Set to `yourmod.main`.
-You may do the same with the `Minecraft Server` configuration if you are planning to use it.
+Solution: `Edit Configurations` > `Minecraft Client` > `Module (Alt + O)` > Set Module to `yourmod.main`.
 
 In the Environment Variables field, you will need to add the following line:
 ```
@@ -41,11 +41,14 @@ In the Environment Variables field, you will need to add the following line:
 If you cannot see this field, enable it in Modify options (Alt + M) > Environment variables (Alt + E).
 
 ## DevAuth
-This project uses [DevAuth](https://github.com/DJtheRedstoner/DevAuth) per default, so you can log in using your real minecraft account. If you don't need that, you can remove it from the buildscript.
+This project uses [DevAuth](https://github.com/DJtheRedstoner/DevAuth), allowing you use your Minecraft account in the development environment. If you don't need that, you can remove it from the buildscript.
 
-To use DevAuth, add the line `-Ddevauth=enabled` to your `Minecraft Client` run configuration's `Environment variables`.
+To use DevAuth, add the following line to your `Minecraft Client` run configuration's `Environment variables`:
+```
+-Ddevauth=enabled
+```
+
 When you next run the configuration, you will be prompted in the `Run` tab to click a Microsoft OAuth link, where you can sign in with your Microsoft account.
-This should only need to be completed once per computer.
 
 ## Mixins
 If you don't want mixins (which allow for modifying vanilla code), then you can remove the references to mixins from the `build.gradle.kts` at the lines specified with comments and the `com.example.mixin` package.
@@ -57,9 +60,16 @@ You don't need to complete these steps, but you should if you plan to use mixins
 3. In `mixins.yourmod.json`, change the `refmap` variable from `mixins.yourmod.refmap.json` and update the `yourmod` string. Use all lowercase, letters only to avoid issues.
 
 ## Testing
+### Importing Essential
 If you wish to test that you have imported Essential correctly, launch the game using the Run button (Shift + F10) with the Minecraft Client configuration selected.
 Once the game has launched, create a new Superflat world in Creative mode and run the command `/essential`.
-If this works, Essential has been successfully implemented.
+
+If this works, Essential has been successfully imported as a separate mod.
+
+### Integrating Essential
+If you wish to test that you have integrated Essential correctly with your mod, press `U` whilst in-game to open the Essential config screen for this mod template.
+
+If this works, Essential has been successfully integrated with your mod.
 
 ## Building/Exporting
 To export your project, run the `gradle build` task, and give other people the file `build/libs/<modid>-<version>.jar`.
