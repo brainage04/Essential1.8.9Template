@@ -1,8 +1,6 @@
 package com.yourname.yourmod;
 
 import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -26,10 +24,12 @@ public class YourMod {
                 player.playSound("game.player.hurt", 1, 1);
             }
         }
+
+        LOGGER.info(realMessage);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-
+        printLogs(null, "Initialised successfully.", false, 0);
     }
 }
