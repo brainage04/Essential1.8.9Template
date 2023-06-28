@@ -53,6 +53,8 @@ repositories {
     maven("https://repo.spongepowered.org/maven/")
     // If you don't want to log in with your real minecraft account, remove this line
     maven("https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1")
+
+    maven("https://repo.essential.gg/repository/maven-public/")
 }
 
 val shadowImpl: Configuration by configurations.creating {
@@ -73,6 +75,8 @@ dependencies {
     // If you don't want to log in with your real minecraft account, remove this line
     runtimeOnly("me.djtheredstoner:DevAuth-forge-legacy:1.1.0")
 
+    compileOnly("gg.essential:essential-1.8.9-forge:4246+g8be73312c")
+    shadowImpl("gg.essential:loader-launchwrapper:1.2.0")
 }
 
 // Tasks:

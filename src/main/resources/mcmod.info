@@ -1,18 +1,22 @@
 [
   {
     "modid": "${modid}",
-    "name": "Xample Mod",
-    "description": "A mod that is used as an example.",
+    "name": "Your Mod",
+    "description": "Change this to a brief description of your mod.",
     "version": "${version}",
     "mcversion": "1.8.9",
     "url": "https://github.com/romangraef/Forge1.8.9Template/",
-    "updateUrl": "",
+    "updateUrl": "https://github.com/romangraef/Forge1.8.9Template/releases/latest/",
     "authorList": [
-      "You"
+        "Your Name"
     ],
     "credits": "",
     "logoFile": "",
-    "screenshots": [],
-    "dependencies": []
+    "screenshots": [
+
+    ],
+    "dependencies": [
+        "Essential"
+    ]
   }
 ]
